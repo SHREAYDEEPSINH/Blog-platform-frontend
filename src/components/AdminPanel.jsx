@@ -20,7 +20,7 @@ const AdminPanel = () => {
 
   useEffect(() => {
     axios
-      .get("https://blog-platform-frontend-eight.vercel.app/admin/users", {
+      .get("https://blog-platform-backend-c19i.onrender.com/admin/users", {
         headers: { Authorization: `Bearer ${lsData.token}` },
       })
       .then((res) => {
@@ -40,7 +40,7 @@ const AdminPanel = () => {
   const handleRoleChange = async (userId, newRole) => {
     try {
       await axios.put(
-        `https://blog-platform-frontend-eight.vercel.app/updaterole/${userId}`,
+        `https://blog-platform-backend-c19i.onrender.com/updaterole/${userId}`,
         { role: newRole },
         { headers: { Authorization: `Bearer ${lsData.token}` } }
       );

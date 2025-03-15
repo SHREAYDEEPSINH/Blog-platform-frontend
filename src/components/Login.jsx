@@ -18,7 +18,7 @@ function Login() {
         }
         else {
             try {
-                let res = await axios.post("https://blog-platform-frontend-eight.vercel.app/user/login", login)
+                let res = await axios.post("https://blog-platform-backend-c19i.onrender.com/user/login", login)
                 localStorage.setItem("loginuser", JSON.stringify(res.data));
                 setsuccess("login successfully")
                 setError("")

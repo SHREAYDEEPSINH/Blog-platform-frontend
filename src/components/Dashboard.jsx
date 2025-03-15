@@ -13,7 +13,7 @@ const Dashboard = () => {
 
 
   const fetchData = () => {
-    axios.get("http://localhost:9070/getPost")
+    axios.get("https://blog-platform-backend-c19i.onrender.com/getPost")
       .then((res) => {
         setPosts(res.data.postDetails)
         setErr("")
@@ -32,7 +32,7 @@ const Dashboard = () => {
     if (!title || !content || !image) {
       alert("all fileds are required")
     } else {
-      await axios.post("http://localhost:9070/post", { image, title, content },
+      await axios.post("https://blog-platform-backend-c19i.onrender.com/post", { image, title, content },
         { headers: { Authorization: `Bearer ${lsData.token}`, "Content-Type": "multipart/form-data", } }
       );
       setTitle("");
@@ -44,7 +44,7 @@ const Dashboard = () => {
   };
 
   let deleteHandle = (id) => {
-    axios.delete(`http://localhost:9070/deletePost/${id}`, { headers: { Authorization: `Bearer ${lsData.token}` } })
+    axios.delete(`https://blog-platform-backend-c19i.onrender.com/deletePost/${id}`, { headers: { Authorization: `Bearer ${lsData.token}` } })
       .then((res) => {
         setPosts(posts.filter((post) => post._id !== id))
         alert("Post deleted successfully!");

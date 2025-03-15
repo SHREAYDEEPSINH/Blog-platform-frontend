@@ -75,7 +75,7 @@ const Dashboard = () => {
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
-          <button className="btn btn-primary" >
+          <button className="btn btn-success" >
             Add Post
           </button>
         </form>

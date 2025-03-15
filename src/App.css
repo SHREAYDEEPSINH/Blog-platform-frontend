@@ -1,0 +1,152 @@
+
+/* navbar  */
+.navbar{
+    height: 60px;
+    /* background-image: url("https://www.baltana.com/files/wallpapers-5/White-Background-Best-Wallpaper-16568.jpg"); */
+    /* background-size: 1000px; */
+
+}
+
+/* carousel section  */
+.carousel-control-prev {
+   top: 50%;
+   left: 5%;
+   transform: translate(-50% , -50%);
+}
+.carousel-control-next{
+    top: 50%;
+    transform: translate(0% , -50%);
+}
+
+/* login page  */
+.login-page {
+    background: url('https://www.atlasandboots.com/wp-content/uploads/2016/05/how-to-start-a-travel-blog-lead-image-2022.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-custom {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-custom {
+    background: linear-gradient(45deg, #007bff, #6610f2);
+    border: none;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(45deg, #6610f2, #007bff);
+}
+
+
+/* register page  */
+.register-page {
+    background: url('https://www.atlasandboots.com/wp-content/uploads/2016/05/how-to-start-a-travel-blog-lead-image-2022.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-custom {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-custom {
+    background: linear-gradient(45deg, #28a745, #218838);
+    border: none;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(45deg, #218838, #28a745);
+}
+
+
+
+
+
+/* blog section  */
+.grid-container{
+    width: 100%;
+    columns: 5;
+    column-gap: 20px ;
+    column-fill: balance;
+}
+.grid-items{
+    
+    width: 100%;
+    margin-bottom: 30px;
+    break-inside: avoid;
+}
+.grid-items img{
+    max-width: 100%;
+    border-radius: 0;
+}
+
+@media screen and (width <= 1024px ) {
+    .grid-container{
+        columns: 4;
+    }
+}
+@media screen and (width <= 768px ) {
+    .grid-container{
+        columns: 3;
+    }
+}
+@media screen and (width <= 567px ) {
+    .grid-container{
+        columns: 2;
+    }
+}
+@media screen and (width <= 376px ) {
+    .grid-container{
+        columns: 1;
+    }
+}
+
+
+
+/* Admin Panel*/
+
+
+.admin-panel {
+    background: url("https://webkit.org/wp-content/uploads/image1-masonry-light.png");
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.admin-card {
+    height: auto;
+    backdrop-filter: blur(10px);
+    background: rgba(50, 51, 52, 0.612);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.258);
+}
+
+.table thead th {
+    background: rgba(0, 0, 0, 0.612);
+    color: rgb(255, 255, 255);
+}
+
+.loading-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}

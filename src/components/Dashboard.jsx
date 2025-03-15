@@ -86,7 +86,7 @@ const Dashboard = () => {
       <div className="grid-container">
         {posts.map((post) => (
           <div key={post._id} className="card border-0 grid-items" style={{ width: "100%" }}>
-            <img src={`https://blog-platform-frontend-eight.vercel.app/${post.image}`} className="card-img-top" alt={post.title} />
+            <img src={`https://blog-platform-frontend-eight.vercel.app${post.image}`} className="card-img-top" alt={post.title} />
             <div className="card-body px-0">
               <h5 className="card-title text-secondary">{post.title}</h5>
               <p className="card-text fs-3 fw-bolder lh-1">{post.content.toUpperCase()}</p>

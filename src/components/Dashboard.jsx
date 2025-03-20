@@ -8,21 +8,19 @@ const Dashboard = () => {
   )
   const [err, setErr] = useState("")
 
-  const fetchData = () => {
-    axios.get("http://localhost:9070/getPost")
-      .then((res) => {
-        setPosts(res.data.postDetails)
-        setErr("")
-        console.log(res.data)
-      }).catch((error) => {
-        setErr(error.message)
-      })
-  }
+  const fetchData = useCallback(async () => {
+    try {
+      let getPost = await axios.get("http://localhost:9070/getPost")
+      setPosts(getPost.data.postDetails)
+      setErr("")
+    } catch (error) {
+      setErr(error.message)
+    }
+  },[])
 
   useEffect(() => {
     fetchData()
-  }, []);
-
+  }, [fetchData]);
   
   return (
     <div className="container mt-4">

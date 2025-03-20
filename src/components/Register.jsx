@@ -1,9 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 
 function Register() {
-
+    let navigate = useNavigate()
     const [registerUser, setRegisterUser] = useState({ userName: "", email: "", password: "" })
     const [success, setSuccess] = useState("")
     const [error, setError] = useState("")
@@ -17,9 +17,10 @@ function Register() {
         }
 
         try {
-            await axios.post("https://blog-platform-backend-c19i.onrender.com/user/register", registerUser)
+            await axios.post("http://localhost:9070/user/register", registerUser)
             setSuccess("Ragistration successfully")
             setError("")
+            navigate("/login")
         } catch (error) {
             setError(error || "registration failed")
             setSuccess("");
@@ -28,6 +29,7 @@ function Register() {
 
     return (
         <>
+
             <div className="register-page">
                 <div className="card card-custom p-4 w-100" style={{ maxWidth: "400px" }}>
                     <h2 className="mb-3 text-center text-white">Register Page</h2>
